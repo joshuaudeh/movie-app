@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import moviesReducer from "../slices/moviesSlice";
+import searchReducer from "../slices/searchSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    movie: moviesReducer,
+    search: searchReducer,
   },
 });
