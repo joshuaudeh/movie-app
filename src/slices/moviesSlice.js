@@ -11,7 +11,7 @@ export const movieData = createAsyncThunk(
       const response = await data.json();
       return response.results;
     } catch (error) {
-      console.error(error.message);
+      // console.error(error);
     }
   }
 );

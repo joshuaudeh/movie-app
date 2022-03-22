@@ -9,9 +9,10 @@ export const searchData = createAsyncThunk(
         `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${movieText}`
       );
       const response = await data.json();
+      console.log(response.results);
       return response.results;
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   }
 );
